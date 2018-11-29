@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'SystemEngine-home',
+  selector: 'system-engine-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

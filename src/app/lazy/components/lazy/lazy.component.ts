@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'SystemEngine-lazy',
+  selector: 'system-engine-lazy',
   templateUrl: './lazy.component.html',
   styleUrls: ['./lazy.component.scss']
 })
