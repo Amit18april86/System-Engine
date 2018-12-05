@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+// How many menu items do we have?
+$menu-items: 2;
+
+// Colours
+$background-color: #121212;
+$indicator-color: #1b1817;
+
+// Dynamic Variables
+$width: (100/$menu-items) * 1%; // makes each item the right size
+
+
+// ======================================================
+// Step 1 - Making a Fixed Width Navigation
+// ======================================================
+
+.PrimaryNav {
+  @extend %cf; // clear the floats
+  list-style: none;
+  margin: 0px auto;
+  //max-width: 720px; // As all measurements are using % this could be a flexible value.
+  padding: 0;
+  width: 100%;
+}
+
+.Nav-item {
+  background: #fff;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: $width; //dynamic width
+  text-align: center;
+  background: #E91E63;
+  &:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+
+  &:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+
+  &.is-active a {
+    color: $indicator-color;
+  }
+
+  a {
+    color: $background-color;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+
+    &:hover {
+      color: $indicator-color;
+    }
+  }
+}
+
+// ======================================================
+// The usual Global resets
+// ======================================================
+
+*, *:before, *:after {
+  box-sizing: border-box; // learn more: https://css-tricks.com/box-sizing/
+}
+
+// Extending the https://css-tricks.com/micro-clearfix/
+%cf:before,
+%cf:after {
+    content: " ";
+    display: table;
+}
+%cf:after {
+    clear: both;
+}
+
+// Presentation Styling
+
+html {
+  background-color: $background-color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+}

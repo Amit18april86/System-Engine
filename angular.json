@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "SystemEngine",
+      "prefix": "system-engine",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"

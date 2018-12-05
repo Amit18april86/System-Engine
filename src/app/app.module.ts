@@ -10,14 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
-
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    CoreModule, 
+    CoreModule,
     HttpClientModule,
     SharedModule,
     AppRoutingModule,

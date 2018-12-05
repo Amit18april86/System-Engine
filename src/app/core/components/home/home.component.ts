@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'system-engine-home',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  personList: Observable<Person[]>;
+  data: Person[];
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get<Person[]>('https://jsonplaceholder.typicode.com/users').subscribe(data => {
+      this.data = data;
+    });
   }
 
 }
