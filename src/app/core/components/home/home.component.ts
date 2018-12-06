@@ -13,9 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<Person[]>('https://jsonplaceholder.typicode.com/users').subscribe(data => {
-      this.data = data;
-    });
+
   }
 
 }

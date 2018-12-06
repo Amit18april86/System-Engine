@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { SharedService } from './shared/services/shared.service';
+
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     CoreModule,
+    FontAwesomeModule,
     HttpClientModule,
     SharedModule,
     AppRoutingModule,

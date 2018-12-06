@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 
 // How many menu items do we have?
-$menu-items: 2;
+$menu-items: 3;
 
 // Colours
 $background-color: #121212;
@@ -10,22 +10,17 @@ $indicator-color: #1b1817;
 // Dynamic Variables
 $width: (100/$menu-items) * 1%; // makes each item the right size
 
-
-// ======================================================
-// Step 1 - Making a Fixed Width Navigation
-// ======================================================
-
-.PrimaryNav {
+.primaryNav {
   @extend %cf; // clear the floats
   list-style: none;
   margin: 0px auto;
-  //max-width: 720px; // As all measurements are using % this could be a flexible value.
   padding: 0;
   width: 100%;
+
 }
 
-.Nav-item {
-  background: #fff;
+.nav-item {
+  background: #FF9800;
   display: block;
   float: left;
   margin: 0;
@@ -58,15 +53,12 @@ $width: (100/$menu-items) * 1%; // makes each item the right size
   }
 }
 
-// ======================================================
-// The usual Global resets
-// ======================================================
 
 *, *:before, *:after {
-  box-sizing: border-box; // learn more: https://css-tricks.com/box-sizing/
+  box-sizing: border-box;
 }
 
-// Extending the https://css-tricks.com/micro-clearfix/
+
 %cf:before,
 %cf:after {
     content: " ";
@@ -83,4 +75,14 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 15px;
+}
+
+
+.spinner{
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  font-size: 3rem;
+  z-index: 300;
 }
