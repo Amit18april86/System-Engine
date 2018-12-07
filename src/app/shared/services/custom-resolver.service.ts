@@ -11,7 +11,7 @@ export class CustomResolverService implements Resolve<any> {
 
   constructor(private sharedService: SharedService) { }
 
-  resolve(): Observable<Product> {
+  resolve(): Observable<Product[]> {
     return this.sharedService.getProducts();
   }
 }
